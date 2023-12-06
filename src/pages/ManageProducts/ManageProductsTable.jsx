@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 
 function ManageProductsTable() {
 
@@ -35,7 +35,10 @@ function ManageProductsTable() {
                 <td>{vehicle.model}</td>
                 <td>{vehicle.rent}</td>
                 <td>
+                  <Link to={`/update-vehicle/${vehicle._id}`}>
                   <button className="btn mx-5">Update</button>
+                  </Link>
+                  
                   <button className="btn">Delect</button>
                 </td>
               </tr>
