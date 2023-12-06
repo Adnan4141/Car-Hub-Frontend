@@ -11,6 +11,8 @@ import AddReview from './pages/AddReview/AddReview';
 import VehicleDetails from './pages/ProductDetails/VehicleDetails';
 import UpdateProduct from './pages/UpdateProduct/UpdateProduct';
 import PostTeam from './pages/PostTeamMate/PostTeam';
+import SignUp from './components/SignUp/SignUp';
+import PaymentGateway from './components/PaymentGateway/PaymentGateway';
 
 function App() {
 
@@ -69,6 +71,15 @@ function App() {
       path: "/add-teammate",
       element: <PostTeam/>
     },
+    {
+      path: "/sign-up",
+      element: <SignUp/>
+    },
+    {
+      path: "/payment/:id",
+      element: <PaymentGateway/>
+    },
+
 
   ])
 

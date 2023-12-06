@@ -1,19 +1,19 @@
 
 import { useNavigate } from 'react-router-dom';
 function PostTeamForm() {
- const navigate =useNavigate();
-    const handleForm = (e) => {
-        e.preventDefault();
-        const name = e.target.name.value;
-        const position = e.target.name.value;
-        const email = e.target.email.value;
-        const image = e.target.image.value;
-        const about = e.target.about.value;
+ const Navigate =useNavigate();
+    const handleForm = (event) => {
+        event.preventDefault();
+        const name = event.target.name.value;
+        const position = event.target.position.value;
+        const email = event.target.email.value;
+        const image = event.target.image.value;
+        const about = event.target.about.value;
 
         const teammate = {
             name,email,position, image, about
         }
-
+        console.log(position)
         fetch(`http://localhost:3000/add-teammate`, {
             method: "POST",
             headers: {
@@ -23,9 +23,11 @@ function PostTeamForm() {
         }).then(res => res.json())
             .then(data => {
                      
-                if (data.acknowledged) {
-                    navigate('/add-teammate')
+                if(data.acknowledged) {
+                    Navigate('/add-teammate')
                 }
+
+                alert(data)
             })
 
 

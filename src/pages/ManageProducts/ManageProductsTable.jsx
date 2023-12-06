@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData, useNavigate } from 'react-router-dom';
 
 function ManageProductsTable() {
 
@@ -10,20 +10,20 @@ function ManageProductsTable() {
   //  },[])
 
   const data = useLoaderData();
-  const [vehicles,setvehicles]=useState(data)
- 
-  function handleDelete(vehicleId){
-    fetch(`http://localhost:3000/delete-by-id/${vehicleId}`,{
-      method:"DELETE",
+  const [vehicles, setvehicles] = useState(data)
+
+  function handleDelete(vehicleId) {
+    fetch(`http://localhost:3000/delete-by-id/${vehicleId}`, {
+      method: "DELETE",
     })
-    .then(res => res.json())
-    .then((data) => {
-      if(data.deletedCount >0){
-        const RestVehicle =vehicles?.filter(vehicle =>vehicle._id != vehicleId) 
-        setvehicles(RestVehicle)
-      }
-    });
-   
+      .then(res => res.json())
+      .then((data) => {
+        if (data.deletedCount > 0) {
+          const RestVehicle = vehicles?.filter(vehicle => vehicle._id != vehicleId)
+          setvehicles(RestVehicle)
+        }
+      });
+
   }
 
 
@@ -52,11 +52,15 @@ function ManageProductsTable() {
                 <td>{vehicle.rent}</td>
                 <td>
                   <Link to={`/update-vehicle/${vehicle._id}`}>
-                  <button className="btn mx-5">Update</button>
+                    <button className="btn mx-5">Update</button>
                   </Link>
-                  
-                  <button  className="btn" onClick={()=>
+
+                  <button className="btn" onClick={() =>
                     handleDelete(vehicle._id)}>Delect</button>
+
+                  <Link to={`/vehicle/${vehicle._id}`}>
+                    <button className="btn mx-3">View</button>
+                  </Link>
                 </td>
               </tr>
             ))}

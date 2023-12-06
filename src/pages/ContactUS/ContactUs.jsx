@@ -5,7 +5,7 @@ import ContactForm from "./ContactForm"
 
 function ContactUs() {
   return (
-    <div>
+    <div className="max-w-7xl mx-auto">
       <Navbar />
       <ContactForm />
       <Footer />

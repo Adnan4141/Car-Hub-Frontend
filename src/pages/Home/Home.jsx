@@ -5,6 +5,8 @@ import ContactForm from "../ContactUS/ContactForm"
 import AboutUs from "./AboutUs"
 import HomeBanner from "./HomeBanner"
 import OurVehicles from "./OurVehicles"
+import TeammateView from "../Teammate/TeammateView"
+
 
 
 
@@ -12,16 +14,22 @@ import OurVehicles from "./OurVehicles"
 function Home() {
   return (
     <div className="md:max-w-7xl md:mx-auto">
-       <Navbar/>
-       <HomeBanner/>
-       <CarouselItem/>
-       <OurVehicles/>
-      <AboutUs/>
-      <ContactForm/>
-      <Footer/>
+      <Navbar />
+      <CarouselItem />
+      <div className="divider divider-end md:my-[50px]"></div>
+      <HomeBanner />
+      <div className="divider divider-end md:my-[50px]"></div>
+      <OurVehicles />
+      <div className="divider divider-end md:my-[50px]"></div>
+      <AboutUs />
+      <div className="divider divider-end md:my-[50px]"></div>
+      <TeammateView />
+      <div className="divider divider-end md:my-[50px]"></div>
+      <ContactForm />
+      <div className="divider divider-end md:my-[50px]"></div>
+      <Footer />
     </div>
   )
 }
 
 export default Home
-   

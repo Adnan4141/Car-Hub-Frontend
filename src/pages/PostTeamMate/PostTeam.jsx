@@ -3,13 +3,9 @@ import PostTeamForm from "./PostTeamForm"
 
 function PostTeam() {
     return (
-        <div>
+        <div className="max-w-7xl mx-auto">
         <Navbar/>
        <PostTeamForm/>
-
-
-
-
         </div>
     )
 }
