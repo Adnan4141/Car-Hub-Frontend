@@ -10,6 +10,7 @@ import AddProduct from './pages/AddProduct/AddProduct';
 import AddReview from './pages/AddReview/AddReview';
 import VehicleDetails from './pages/ProductDetails/VehicleDetails';
 import UpdateProduct from './pages/UpdateProduct/UpdateProduct';
+import PostTeam from './pages/PostTeamMate/PostTeam';
 
 function App() {
 
@@ -41,6 +42,7 @@ function App() {
       element: <AddProduct />
 
     },
+   
     {
       path: "/add-review",
       element: <AddReview />
@@ -61,7 +63,12 @@ function App() {
       loader:function({params}){
         return fetch(`http://localhost:3000/vehicle/${params.id}`);
       }
-    }
+    },
+
+    {
+      path: "/add-teammate",
+      element: <PostTeam/>
+    },
 
   ])
 

@@ -20,10 +20,15 @@ function Navbar() {
                         <li>
                             <Link to={`/add-product`}>Add Products</Link>
                         </li>
-
+                      
                         <li>
                             <Link to={`/contact-us`}>Contact</Link>
                         </li>
+
+                        <li>
+                            <Link to={`/add-teammate`}>Add Member</Link>
+                        </li>
+
 
                     </ul>
                 </div>
