@@ -7,7 +7,9 @@ function Navbar() {
             <div className="navbar bg-base-200 flex flex-col md:flex-row">
 
                 <div className="flex-0">
-                    <Link to={`/`}> <button className="btn btn-ghost text-3xl md:text-xl ml-5">Car-Hub</button></Link>
+                    <Link to={`/`} className="w-[100px] md:ml-10 rounded-lg hover:shadow-lg">
+                        <img src="https://scontent.fcgp7-1.fna.fbcdn.net/v/t1.6435-9/166236181_103608611832203_255698169725973464_n.jpg?stp=cp0_dst-jpg_e15_p320x320_q65&_nc_cat=101&ccb=1-7&_nc_sid=efc22e&_nc_ohc=b_tzjree0ugAX_v5Xdj&_nc_ht=scontent.fcgp7-1.fna&oh=00_AfB6vr714f3LECz5VEqXwBI2yWKYdMFfuv_ZpsM6mc-quw&oe=6598153E" alt="" />
+                    </Link>
                 </div>
                 <div className="flex-1 md:ml-5">
                     <div className="join">

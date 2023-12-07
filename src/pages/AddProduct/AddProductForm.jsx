@@ -6,22 +6,23 @@ function AddProductForm() {
 
     const handleProductFrom = (e) => {
         e.preventDefault();
-        const make = e.target.make.value;
         const model = e.target.model.value;
-        const rent = e.target.rent.value;
+        const brand = e.target.brand.value;
+        const category = e.target.category.value;
+        const price = e.target.price.value;
         const image = e.target.image.value;
         const description = e.target.description.value;
 
-        const vehicle = {
-            make, model, rent, image, description
+        const product = {
+            model, brand,category, price, image, description
         }
-       
-        fetch(`http://localhost:3000/add-a-vehicle`, {
+        console.log(product)
+        fetch(`http://localhost:3000/add-a-product`, {
             method:"POST",
             headers:{
                 "content-Type" :"application/json"
             },
-            body:JSON.stringify(vehicle)
+            body:JSON.stringify(product)
         }).then(res=>res.json())
         .then (data=> {
          
@@ -41,39 +42,48 @@ function AddProductForm() {
             <form onSubmit={handleProductFrom} className="p-10 text-center w-full md:w-2/4 flex flex-col mx-auto" >
 
                 <div className="text-left ">
-                    <p className="text-2xl my-2 mx-2">Car Company</p>
-                    <input type="text"
-                        name="make"
-                        placeholder="Car Company/make" className="input input-bordered w-full" />
-                </div>
-
-                <div className="text-left ">
-                    <p className="text-2xl my-2 mx-2">Car Model</p>
+                    <p className="text-2xl my-2 mx-2">Product Model</p>
                     <input type="text"
                         name="model"
-                        placeholder="Car Model" className="input input-bordered w-full" />
+                        placeholder="Product Model" className="input input-bordered w-full" />
                 </div>
 
                 <div className="text-left ">
-                    <p className="text-2xl my-2 mx-2">Car Rent</p>
+                    <p className="text-2xl my-2 mx-2">Brand</p>
                     <input type="text"
-                        name="rent"
-                        placeholder="Car Rent Per Hour" className="input input-bordered w-full" />
+                        name="brand"
+                        placeholder="Product brand" className="input input-bordered w-full" />
+                </div>
+ 
+
+                <div className="text-left ">
+                    <p className="text-2xl my-2 mx-2">Category</p>
+                    <input type="text"
+                        name="category"
+                        placeholder="Category" className="input input-bordered w-full" />
                 </div>
 
 
                 <div className="text-left ">
-                    <p className="text-2xl my-2 mx-2">Car Image</p>
+                    <p className="text-2xl my-2 mx-2">Price</p>
+                    <input type="text"
+                        name="price"
+                        placeholder="Product price" className="input input-bordered w-full" />
+                </div>
+
+
+                <div className="text-left ">
+                    <p className="text-2xl my-2 mx-2">Image</p>
                     <input type="text"
                         name="image"
-                        placeholder="Car Image" className="input input-bordered w-full" />
+                        placeholder="Url" className="input input-bordered w-full" />
                 </div>
 
                 <div className="text-left ">
-                    <p className="text-2xl my-2 mx-2">Car Description</p>
+                    <p className="text-2xl my-2 mx-2">Description</p>
                     <input type="text"
                         name="description"
-                        placeholder="Car Description" className="input input-bordered w-full" />
+                        placeholder="Description" className="input input-bordered w-full" />
                 </div>
 
 

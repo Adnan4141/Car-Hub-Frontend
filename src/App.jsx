@@ -8,7 +8,7 @@ import ContactUs from './pages/ContactUS/ContactUs';
 import ManageProducts from './pages/ManageProducts/ManageProducts';
 import AddProduct from './pages/AddProduct/AddProduct';
 import AddReview from './pages/AddReview/AddReview';
-import VehicleDetails from './pages/ProductDetails/VehicleDetails';
+import ProductDetails from './pages/ProductDetails/productDetails';
 import UpdateProduct from './pages/UpdateProduct/UpdateProduct';
 import PostTeam from './pages/PostTeamMate/PostTeam';
 import SignUp from './components/SignUp/SignUp';
@@ -21,7 +21,7 @@ function App() {
       path: "/",
       element: <Home />,
       loader: function () {
-        return fetch(`http://localhost:3000/all-vehicles`);
+        return fetch(`http://localhost:3000/all-products`);
       }
 
     },
@@ -35,7 +35,7 @@ function App() {
       path: "/manage-products",
       element: <ManageProducts />,
       loader: function () {
-        return fetch(`http://localhost:3000/all-vehicles`);
+        return fetch(`http://localhost:3000/all-products`);
       }
 
     },
@@ -52,18 +52,18 @@ function App() {
     },
 
     {
-      path:"/vehicle/:id",
-      element: <VehicleDetails/>,
+      path:"/product/:id",
+      element: <ProductDetails/>,
       loader:function({params}){
-        return fetch(`http://localhost:3000/vehicle/${params.id}`);
+        return fetch(`http://localhost:3000/product/${params.id}`);
       }
     },
 
     {
-      path:"/update-vehicle/:id",
+      path:"/update-product/:id",
       element:<UpdateProduct/>,
       loader:function({params}){
-        return fetch(`http://localhost:3000/vehicle/${params.id}`);
+        return fetch(`http://localhost:3000/product/${params.id}`);
       }
     },
 

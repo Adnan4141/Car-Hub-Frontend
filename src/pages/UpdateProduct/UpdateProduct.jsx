@@ -4,28 +4,30 @@ import { useLoaderData, useNavigate} from 'react-router-dom'
 
 
 function UpdateProduct() {
-    const vehicle = useLoaderData();
+    const product = useLoaderData();
    const Navigate=useNavigate();
 
     const handleUpdateForm = (e) => {
         e.preventDefault();
-        const make = e.target.make.value;
+        const brand = e.target.brand.value;
         const model = e.target.model.value;
-        const rent = e.target.rent.value;
+        const category = e.target.category.value;
+        const price = e.target.price.value;
         const image = e.target.image.value;
         const description = e.target.description.value;
 
-        const UpdateVehicle = {
-            make, model, rent, image, description
+        const UpdateProduct = {
+             model,brand,category, price, image, description
         }
       
-        fetch(`http://localhost:3000/update-by-id/${vehicle._id}`,{
+        fetch(`http://localhost:3000/update-by-id/${product._id}`,{
             method:"PUT",
             headers:{
                 "content-Type" :"application/json"
             },
-            body:JSON.stringify(UpdateVehicle)
+            body:JSON.stringify(UpdateProduct)
         })
+        
         .then(res => res.json())
         .then(data=> {
            if(data.modifiedCount== 1){
@@ -51,44 +53,53 @@ function UpdateProduct() {
             className="p-10 text-center w-full md:w-2/4 flex flex-col mx-auto" >
 
                 <div className="text-left ">
-                    <p className="text-2xl my-2 mx-2">Car Company</p>
-                    <input type="text"
-                        name="make"
-                        defaultValue={vehicle.make}
-                        placeholder="Car Company/make" className="input input-bordered w-full" />
-                </div>
-
-                <div className="text-left ">
-                    <p className="text-2xl my-2 mx-2">Car Model</p>
+                    <p className="text-2xl my-2 mx-2">Product Model</p>
                     <input type="text"
                         name="model"
-                        defaultValue={vehicle.model}
-                        placeholder="Car Model" className="input input-bordered w-full" />
+                        defaultValue={product.model}
+                        placeholder="Product Model" className="input input-bordered w-full" />
                 </div>
 
                 <div className="text-left ">
-                    <p className="text-2xl my-2 mx-2">Car Rent</p>
+                    <p className="text-2xl my-2 mx-2">Brand</p>
                     <input type="text"
-                        name="rent"
-                        defaultValue={vehicle.rent}
-                        placeholder="Car Rent Per Hour" className="input input-bordered w-full" />
+                        name="brand"
+                        defaultValue={product.brand}
+                        placeholder="Product Brand" className="input input-bordered w-full" />
+                </div>
+
+                <div className="text-left ">
+                    <p className="text-2xl my-2 mx-2">Category</p>
+                    <input type="text"
+                        name="category"
+                        defaultValue={product.category}
+                        placeholder="Category" className="input input-bordered w-full" />
                 </div>
 
 
                 <div className="text-left ">
-                    <p className="text-2xl my-2 mx-2">Car Image</p>
+                    <p className="text-2xl my-2 mx-2">Price</p>
+                    <input type="text"
+                        name="price"
+                        defaultValue={product.price}
+                        placeholder="Price" className="input input-bordered w-full" />
+                </div>
+
+
+                <div className="text-left ">
+                    <p className="text-2xl my-2 mx-2">Product Image</p>
                     <input type="text"
                         name="image"
-                        defaultValue={vehicle.image}
-                        placeholder="Car Image" className="input input-bordered w-full" />
+                        defaultValue={product.image}
+                        placeholder="Url" className="input input-bordered w-full" />
                 </div>
 
                 <div className="text-left ">
-                    <p className="text-2xl my-2 mx-2">Car Description</p>
+                    <p className="text-2xl my-2 mx-2">Description</p>
                     <input type="text"
                         name="description"
-                        defaultValue={vehicle.description}
-                        placeholder="Car Description" className="input input-bordered w-full" />
+                        defaultValue={product.description}
+                        placeholder="Description" className="input input-bordered w-full" />
                 </div>
 
 

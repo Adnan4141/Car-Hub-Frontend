@@ -10,17 +10,17 @@ function ManageProductsTable() {
   //  },[])
 
   const data = useLoaderData();
-  const [vehicles, setvehicles] = useState(data)
+  const [products, setproducts] = useState(data)
 
-  function handleDelete(vehicleId) {
-    fetch(`http://localhost:3000/delete-by-id/${vehicleId}`, {
+  function handleDelete(productId) {
+    fetch(`http://localhost:3000/delete-by-id/${productId}`, {
       method: "DELETE",
     })
       .then(res => res.json())
       .then((data) => {
         if (data.deletedCount > 0) {
-          const RestVehicle = vehicles?.filter(vehicle => vehicle._id != vehicleId)
-          setvehicles(RestVehicle)
+          const Restproduct = products?.filter(product => product._id != productId)
+          setproducts(Restproduct)
         }
       });
 
@@ -35,30 +35,32 @@ function ManageProductsTable() {
           {/* head */}
           <thead>
             <tr>
-              <th>Make</th>
               <th>Model</th>
-              <th>Rent</th>
+              <th>Brand</th>
+              <th>Category</th>
+              <th>Price</th>
               <th>Actions</th>
             </tr>
           </thead>
           <tbody>
 
-            {vehicles?.map(vehicle => (
+            {products?.map(product => (
 
-              <tr key={vehicle._id}>
+              <tr key={product._id}>
 
-                <td>{vehicle.make}</td>
-                <td>{vehicle.model}</td>
-                <td>{vehicle.rent}</td>
+                <td>{product.model}</td>
+                <td>{product.brand}</td>
+                <td>{product.category}</td>
+                <td>${product.price}</td>
                 <td>
-                  <Link to={`/update-vehicle/${vehicle._id}`}>
+                  <Link to={`/update-product/${product._id}`}>
                     <button className="btn mx-5">Update</button>
                   </Link>
 
                   <button className="btn" onClick={() =>
-                    handleDelete(vehicle._id)}>Delect</button>
+                    handleDelete(product._id)}>Delect</button>
 
-                  <Link to={`/vehicle/${vehicle._id}`}>
+                  <Link to={`/product/${product._id}`}>
                     <button className="btn mx-3">View</button>
                   </Link>
                 </td>

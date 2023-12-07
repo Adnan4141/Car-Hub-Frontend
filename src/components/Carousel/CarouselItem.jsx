@@ -4,7 +4,7 @@ function CarouselItem() {
   return (
     <>
       <div>
-        <p className="text-center font-mono text-3xl text-red-500 md:my-4 bg-gray-400 p-2">Explore Our Service</p>
+        <p className="text-center font-mono text-3xl text-red-500 md:my-4 bg-gray-400 p-2">Explore Our Products</p>
       </div>
       <div className="carousel w-full md:my-7">
         <div id="slide1" className="carousel-item relative w-full">

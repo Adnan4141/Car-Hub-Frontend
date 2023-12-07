@@ -4,8 +4,9 @@ import Navbar from "../../components/Shared/Navbar"
 import ContactForm from "../ContactUS/ContactForm"
 import AboutUs from "./AboutUs"
 import HomeBanner from "./HomeBanner"
-import OurVehicles from "./OurVehicles"
+import OurProducts from "./OurProducts"
 import TeammateView from "../Teammate/TeammateView"
+
 
 
 
@@ -19,7 +20,7 @@ function Home() {
       <div className="divider divider-end md:my-[50px]"></div>
       <HomeBanner />
       <div className="divider divider-end md:my-[50px]"></div>
-      <OurVehicles />
+      <OurProducts />
       <div className="divider divider-end md:my-[50px]"></div>
       <AboutUs />
       <div className="divider divider-end md:my-[50px]"></div>
