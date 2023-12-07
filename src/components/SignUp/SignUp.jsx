@@ -3,7 +3,7 @@ import Navbar from '../Shared/Navbar'
 
 function SignUp() {
     return (
-        <>
+        <div className='max-w-7xl mx-auto'>
          <Navbar/>
         <div className="mt-8 md:mt-0 flex justify-center items-center md:p-[200px] bg-amber-200 w-7xl mx-auto" >
             <div className="w-full max-w-sm p-6 m-auto mx-auto bg-white rounded-lg shadow-md dark:bg-gray-800">
@@ -65,7 +65,7 @@ function SignUp() {
 
         </div>
 
-        </>
+        </div>
     )
 }
 

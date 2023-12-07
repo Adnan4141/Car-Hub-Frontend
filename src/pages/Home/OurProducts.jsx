@@ -1,11 +1,12 @@
 import { useLoaderData } from "react-router-dom"
 import SingleProductCard from "./SingleProductCard";
+import ShopingCard from "../../components/Card/ShopingCard";
 
 
 function OurProducts() {
 
     const products = useLoaderData();
-    console.log(products);
+  
 
 
     return (
@@ -18,8 +19,8 @@ function OurProducts() {
 
                 {
                     products?.map(product => (
-
-                        <SingleProductCard product={product} key={product._id} />
+                        <ShopingCard product={product} key={product._id}/>
+                        
                     ))
                 }
 

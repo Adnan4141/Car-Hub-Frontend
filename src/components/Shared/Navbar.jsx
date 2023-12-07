@@ -36,11 +36,11 @@ function Navbar() {
                         </li>
 
                         <li>
-                            <Link to={`/manage-products`}>Manage-Product</Link>
+
                         </li>
 
                         <li>
-
+                            <Link to={`/shoping-cart`}>Order</Link>
                         </li>
 
                         <li>
@@ -54,7 +54,9 @@ function Navbar() {
                             <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
                                 <li><Link to={`/add-teammate`}>Add Member</Link></li>
                                 <li><Link to={`/add-product`}>Add Products</Link></li>
+                                <li><Link to={`/manage-products`}>Manage-Product</Link></li>
                                 <li><Link to={`/sign-up`}>User Account</Link></li>
+
 
                             </ul>
                         </div>

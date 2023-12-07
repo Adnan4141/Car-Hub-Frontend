@@ -6,6 +6,9 @@ import AboutUs from "./AboutUs"
 import HomeBanner from "./HomeBanner"
 import OurProducts from "./OurProducts"
 import TeammateView from "../Teammate/TeammateView"
+import Card from "../../components/Card/Card"
+import ShopingCard from "../../components/Card/ShopingCard"
+import ShopingCart from "../../components/Cart/ShopingCart"
 
 
 

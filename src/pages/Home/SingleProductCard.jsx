@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 
 
-function SingleProductCard({ product }) {
+function SingleProductCard({product}) {
   return (
 
     <div key={product._id} className="card card-compact w-96 bg-base-100 shadow-xl">

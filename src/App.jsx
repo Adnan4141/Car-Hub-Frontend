@@ -13,6 +13,7 @@ import UpdateProduct from './pages/UpdateProduct/UpdateProduct';
 import PostTeam from './pages/PostTeamMate/PostTeam';
 import SignUp from './components/SignUp/SignUp';
 import PaymentGateway from './components/PaymentGateway/PaymentGateway';
+import ShopingCart from './components/Cart/ShopingCart';
 
 function App() {
 
@@ -79,6 +80,11 @@ function App() {
       path: "/payment/:id",
       element: <PaymentGateway/>
     },
+    {
+      path: "/shoping-cart",
+      element:<ShopingCart/>
+    },
+
 
 
   ])

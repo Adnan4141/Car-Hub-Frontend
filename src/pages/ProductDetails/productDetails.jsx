@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom"
+import { Link, useLoaderData } from "react-router-dom"
 import Navbar from "../../components/Shared/Navbar"
 import Footer from "../../components/Shared/Footer";
 
@@ -21,7 +21,9 @@ function VehicleDetails() {
                         <p className="py-4">{details.brand}</p>
                         <p className="py-4">{details.description}</p>
                         <p className="py-4 text-bold text-3xl text-yellow-500">${details.price}</p>
-                        <button className="btn btn-primary">Buy Now</button>
+                       <Link to={`/shoping-cart`}>
+                       <button className="btn btn-primary">Buy Now</button>
+                       </Link>
                     </div>
                 </div>
             </div>
