@@ -14,6 +14,7 @@ import PostTeam from './pages/PostTeamMate/PostTeam';
 import SignUp from './components/SignUp/SignUp';
 import PaymentGateway from './components/PaymentGateway/PaymentGateway';
 import ShopingCart from './components/Cart/ShopingCart';
+import Dashboard from './components/Dashboard/Dashboard';
 
 function App() {
 
@@ -83,6 +84,11 @@ function App() {
     {
       path: "/shoping-cart",
       element:<ShopingCart/>
+    },
+        
+    {
+      path: "/dashboard",
+      element:<Dashboard/>
     },
 
 

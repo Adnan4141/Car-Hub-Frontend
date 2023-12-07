@@ -9,7 +9,7 @@ function HomeBanner() {
         <div className="hero-content text-center text-neutral-content">
           <div className="max-w-md">
             <h1 className="mb-5 text-5xl font-bold">Hello there Explore Our Shop</h1>
-            <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+            <p className="mb-5 text-2xl">Upgrade your life with the latest gadgets. Shop now and enjoy exclusive deals.</p>
            
             <Link to={`/sign-up`}><button className="btn btn-primary">Get Started</button></Link>
           </div>

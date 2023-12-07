@@ -9,6 +9,7 @@ import TeammateView from "../Teammate/TeammateView"
 import Card from "../../components/Card/Card"
 import ShopingCard from "../../components/Card/ShopingCard"
 import ShopingCart from "../../components/Cart/ShopingCart"
+import Dashboard from "../../components/Dashboard/Dashboard"
 
 
 

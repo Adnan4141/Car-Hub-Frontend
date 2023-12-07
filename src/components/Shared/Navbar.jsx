@@ -55,7 +55,9 @@ function Navbar() {
                                 <li><Link to={`/add-teammate`}>Add Member</Link></li>
                                 <li><Link to={`/add-product`}>Add Products</Link></li>
                                 <li><Link to={`/manage-products`}>Manage-Product</Link></li>
+                                <li><Link to={`/dashboard`}>Dashboard</Link></li>
                                 <li><Link to={`/sign-up`}>User Account</Link></li>
+                                
 
 
                             </ul>
